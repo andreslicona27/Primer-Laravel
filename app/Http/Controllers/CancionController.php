@@ -28,4 +28,10 @@ class CancionController extends Controller
 
         return redirect()->route('inicio');
     }
+
+    public function editarCancion($id){
+        $cancion = Cancion::find($id);
+
+        return view('editar_cancion', ['cancion'=>$cancion]);
+    }
 }

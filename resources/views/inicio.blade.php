@@ -3,7 +3,7 @@
 @section('contenido')
 <h1>Todas las canciones</h1>
 @if(session('mensaje'))
-<h3 style="color:blue;">{{'mensaje'}}</h3>
+<h3 style="color:blue;">{{session('mensaje')}}</h3>
 @endif()
 <table>
     <thead>
@@ -23,6 +23,7 @@
             <td>{{$cancion->artista}}</td>
             <td>{{$cancion->album}}</td>
             <td>{{$cancion->anio}}</td>
+            <td><a href="{{route('editarCancion', ['id'=>$cancion->id])}}">Actualizar</a></td>
         </tr>
         @endforeach
     </tbody>
