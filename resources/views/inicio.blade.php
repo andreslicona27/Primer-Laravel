@@ -24,6 +24,7 @@
             <td>{{$cancion->album}}</td>
             <td>{{$cancion->anio}}</td>
             <td><a href="{{route('editarCancion', ['id'=>$cancion->id])}}">Actualizar</a></td>
+            <td><a href="{{route('eliminarCancion', ['id'=>$cancion->id])}}">Borrar</a></td>
         </tr>
         @endforeach
     </tbody>
